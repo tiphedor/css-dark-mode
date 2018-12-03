@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			.dark, .light {
+				display: none;
+			}
+
+			@media (prefers-color-scheme: light) {
+				body {
+					background: sandybrown;
+					color: black;
+				}
+
+				.light {
+					display: inline-block;
+				}
+
+				.notsupported {
+					display: none;
+				}
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background: black;
+					color: white;
+				}
+
+				.dark {
+					display: inline-block;
+				}
+
+				.notsupported {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>
+				<h3><code>prefers-color-scheme</code> media query</h3>
+
+				A new CSS draft introduces the <code>prefers-color-scheme</code> media query, allowing website designers to write UI that reflect the user preferences on color scheme.
+
+				<br /><br />
+
+				<strong>Usage:</strong>
+
+				<br /><br />
+
+				<code>
+					@media (prefers-color-scheme: light) {<br />
+						// Light mode code<br />
+					}<br />
+					@media (prefers-color-scheme: dark) {<br />
+						// Dark mode code<br />
+					}<br />
+				</code>
+			</p>
+		</div>
+
+		<br />
+
+		<hr />
+
+		<br />
+
+		<div class='notsupported'>
+			Your browser / os combination does not support <code>prefers-color-scheme</code>. Try using Safari Technology Preview on macOS Mojave.
+		</div>
+
+		<div class='dark'>
+			You are in dark mode !
+		</div>
+
+		<div class='light'>
+			Your are in light mode !
+		</div>
+	</body>
+</html>
